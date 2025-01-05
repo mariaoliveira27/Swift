@@ -1,6 +1,6 @@
 # Swift
 
-Bem-vindo ao repositório de aprendizado de **Swift**! Este README contém informações básicas e recursos para iniciantes na linguagem de programação Swift.
+Bem-vindo ao repositório de aprendizado de **Swift**! Este README contém informações básicas e recursos para iniciantes na linguagem de programação Swift. Este aprendizado está sendo realizado através do **projeto HackaTruck**, uma iniciativa educacional incrível que ensina desenvolvimento com Swift.
 
 ---
 
