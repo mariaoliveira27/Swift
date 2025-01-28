@@ -65,3 +65,18 @@ for i in 0 ..< nomes.count{
 }
 
 
+let dic = ["casas": 10, "apt": 23, "faz": 1, "sob": 6]
+
+var qtdI = 0
+var maiorOcorrencia = ""
+var maiorValor = 0
+
+for(chave, valor) in dic {
+    qtdI +=  valor 
+    if (valor > maiorValor){
+        maiorValor = valor
+        maiorOcorrencia = chave
+    }
+}
+print("Numero de imoveis: \(qtdI)")
+print("Maior ocorrencia de \(maiorOcorrencia) (\(maiorValor))")
