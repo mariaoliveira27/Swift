@@ -55,6 +55,17 @@ struct ContentView: View {
                     }
                     Spacer()
                 }
+VStack{
+ForEach(arrayMusicas){musica in
+    HStack{
+        AsyncImage(url: URL(string: musica.capa)){
+                            image in image.resizable()
+                        }placeholder: {
+                           ProgressView()
+                        }.scaledToFit() .frame(width: 50, height: 50)
+                        Text(musica.name)
+                    Spacer()
+                    Image(systemName: "ellipses")
                 
                
                     }
