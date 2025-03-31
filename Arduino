@@ -1,0 +1,21 @@
+arduino
+//Sensor de gas
+
+
+const int sensorPin = A0;
+int sensorValue;
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(115200);
+}
+
+void loop() {
+  sensorValue = analogRead(sensorPin); //le o valor de sensor
+  //Serial.println(sensorValue); //Envia o valor lido pela porta serial
+  Serial.println(map(sensorValue, 0,1023,0,1000)); //Envia o valor lido pela porta serial em %
+  delay(1000);// aguarda 1 segundo antes de ler o sensor novamente
+  // put your main code here, to run repeatedly:
+
+}
+
