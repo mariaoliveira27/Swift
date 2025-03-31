@@ -18,4 +18,24 @@ void loop() {
   // put your main code here, to run repeatedly:
 
 }
-
+//sendor de batimento cardiaco
+#define sensorPin A0 //Define que o Pino de sinal do sensor deve ser conectado a entrada analógica A0 do Arduino      
+#define ledPin 13 //Define o pino ledPin do Arduino  
+int LeituraSensor;//Declaração da variável que irá armazenar os valores de leitura do sensor de batimento
+int Pulso = 550; //Valor analogico limiar para ser considerado uma Pulso
+void setup() {
+  pinMode(ledPin, OUTPUT); //ledPin sendo um pindo de saída de sinal
+  Serial.begin(9600); //Incia a comunicação serial com velocidade de dados em 9600
+}
+void loop() {
+  LeituraSensor = analogRead(sensorPin); //Realiza a leitura analogica do pino de sinal do sensor
+  Serial.println(LeituraSensor); //Mostra os valores analógicos no monitor serial
+  
+  if (LeituraSensor > Pulso) { //Se o valor de leitura for superior ao limiar....
+    digitalWrite(ledPin, HIGH); //ledPin do Arduino acende
+  }
+  else {
+    digitalWrite(ledPin, LOW); //ledPin do apaga
+  }
+  delay(10);//tempo de espera de 10 milissegundos entre as leituras
+}
